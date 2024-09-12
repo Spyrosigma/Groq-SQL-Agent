@@ -1,7 +1,11 @@
 # Groq-SQL-Agent
 
-## Features:
-
+### Features:
+1. Websockets-powered chatbots for real-time Communication.
+2. Chatbots are equipped with Session memory (Until you refresh, the chatbot remembers the previous conversation)
+3. GROQ-LLM used for Ultra-Fast responses.
+4. Multiple users can use it simultaneously. (The concept of UUID and rooms is implemented)
+5. LangChain is used for the efficient orchestration of functions.
 
 ### How to run locally ?
 
@@ -23,8 +27,8 @@
 
    - Satellite Image Agent
       ```bash
-        python satellite.py
-        ```
+      python satellite.py
+      ```
    - Housekeeping Satellite Agent
       ```bash
       python telementry.py  
