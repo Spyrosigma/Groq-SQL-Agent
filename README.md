@@ -1,5 +1,7 @@
 # Groq-SQL-Agent
 
+## Features:
+
 
 ### How to run locally ?
 
@@ -17,19 +19,16 @@
   - GROQ_API_KEY
   - Your Database URL and API key (You've to set it up)
 
-4. There are 2 Agents:
-   - Satellite Image Agent
-   - Housekeeping Satellite Agent
+4. There are 2 Agents, run them with these commands:
 
-5. 2 separate python files are there, run them :
-  - For houskeeping Agent
-    ```bash
-    python telementry.py  
-    ```
-  - For Satellite Image Agent
-    ```bash
-    python satellite.py
-    ```
+   - Satellite Image Agent
+      ```bash
+        python satellite.py
+        ```
+   - Housekeeping Satellite Agent
+      ```bash
+      python telementry.py  
+      ```
 
 5. Run the index.html file for Chatbot Interaction.
 
