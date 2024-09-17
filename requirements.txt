@@ -10,3 +10,6 @@ supabase
 sqlparse
 gunicorn
 gevent-websocket
+io 
+matplotlib
+seaborn

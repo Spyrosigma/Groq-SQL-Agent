@@ -21,6 +21,10 @@ import sqlparse
 from supabase import create_client, Client
 import supabase
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
 load_dotenv()
 app = Flask(__name__)
 CORS(app)
@@ -120,7 +124,7 @@ def generate_nl_response(user_query, sql_query, query_results):
     )
     prompt = f"""
 ### Task
-Generate a natural language response to the user's query about satellite housekeeping data based on the SQL query results.
+Answer to the user's query about satellite housekeeping data based on the table data provided.
 
 ### User Query
 {user_query}
@@ -207,7 +211,7 @@ def handle_message(message):
         )
 
     conversation = user_conversations[user_id]
-    
+
     sql_query = query_conv(user_query)
     print('Generated SQL query:', sql_query)
     
@@ -222,4 +226,4 @@ def handle_message(message):
     emit('bot_response', {'data': nl_response}, room=user_id)
 
 if __name__ == '__main__':
-    socketio.run(app, debug=False)
+    socketio.run(app, debug=True)
